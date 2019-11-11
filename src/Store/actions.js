@@ -7,8 +7,10 @@ const saveData = data => ({
   payload: data,
 });
 
+const BASE_URL = 'https://mate-uber-eats-api.herokuapp.com/api/v1/';
+
 export const loadData = () => (dispatch) => {
-  fetch('https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants')
+  fetch(`${BASE_URL}restaurants`)
     .then(resp => resp.json())
     .then(({ data }) => {
       dispatch(saveData(data));

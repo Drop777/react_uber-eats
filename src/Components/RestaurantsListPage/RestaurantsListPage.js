@@ -43,6 +43,7 @@ export class RestaurantsListPage extends Component {
 }
 
 RestaurantsListPage.propTypes = {
+  // For future
   restaurantsListData: PropTypes.arrayOf(PropTypes.shape({})),
   loadData: PropTypes.func.isRequired,
 };
